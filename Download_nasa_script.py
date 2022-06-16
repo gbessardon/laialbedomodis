@@ -21,7 +21,7 @@ auth = Auth().login(strategy="netrc") # if we want to access NASA DATA in the cl
 
 SHORTNAME="MCD43A2"
 COLLECTION='061'
-YEAR='2021'
+YEAR='2017'
 STMONTH='07'
 ENDMONTH='09'
 STARTDATE=YEAR+'-'+STMONTH+'-01'
@@ -32,7 +32,7 @@ MAXLON=180
 MAXLAT=90
 CLOUDMIN=0
 CLOUDMAX=10
-localdir=os.path.join(os.getcwd(),SHORTNAME,COLLECTION,YEAR)
+localdir=os.path.join('/home/gbessardon/DATA',SHORTNAME,COLLECTION,YEAR)
 
 
 # Create the Query
