@@ -30,7 +30,7 @@ example for LAI files
 $ vi make_uncompress.sh
 $i 
 $for file in LAI*
-:q
+$:wq
 
 ```
 example for vissible albedo files
@@ -38,7 +38,7 @@ example for vissible albedo files
 $ vi make_uncompress.sh
 $i 
 $for file in AL-BH-VI*
-:q
+$:wq
 
 ```
 
@@ -70,18 +70,29 @@ $ echo "machine urs.earthdata.nasa.gov login USERNAME password PASSWORD " > .net
 $ chmod 0600 .netrc
 
 ```
+   ### 2.3 Run the script or the notebook to download the data
+Currently it downloads the data only one product and year at a time the process can be long so I recommend to run the script
+Don't forget to change the SHORTNAME, COLLECTION, YEAR etc in the file to the desired values before running the script
 
-# 3. Create 10 days median for each tiles
+```
+$ cd Download_nasa_data
+$ vi Download_nasa_script.py
+.....
+$:wq
+$ nohup python3 Download_nasa_script.py
+
+```
+## 3. Create 10 days median for each tiles
 go in the tiles_median directory and run the python script or the notebook there
 ```
 $ cd tiles_median
 ```
-# 4 Merge and reproject MODIS tiles
+## 4 Merge and reproject MODIS tiles
 
 
-# 5 Merge MODIS to the rest of ECOSG data
+## 5 Merge MODIS to the rest of ECOSG data
 
-# 6 Recompress the resulting files
+## 6 Recompress the resulting files
 
 ```
 $ cd Compress
