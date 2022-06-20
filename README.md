@@ -70,3 +70,21 @@ $ echo "machine urs.earthdata.nasa.gov login USERNAME password PASSWORD " > .net
 $ chmod 0600 .netrc
 
 ```
+
+# 3. Create 10 days median for each tiles
+go in the tiles_median directory and run the python script or the notebook there
+```
+$ cd tiles_median
+```
+# 4 Merge and reproject MODIS tiles
+
+
+# 5 Merge MODIS to the rest of ECOSG data
+
+# 6 Recompress the resulting files
+
+```
+$ cd Compress
+```
+
+
