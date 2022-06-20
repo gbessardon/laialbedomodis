@@ -1,15 +1,47 @@
 # laialbedomodis
+ ## Required python libraires
+os
+earthdata
+matplotlib
+numpy
+os
+re
+pandas
+gdal
+rasterio
 
  ## 0 Download the ECO-SG LAI albedo and land cover map if needed
 Follow the instruction from https://opensource.umr-cnrm.fr/projects/ecoclimap-sg/wiki in the Compress folder 
+```
+$ cd Compress
+$ ftp ftp.umr-cnrm.fr
+...
+...
+```
  ## 1. Uncompress ECOCLIMAP-SG files
   ### 1.1 uncompress all the .gz file
 ```
 $ gzip -d *.gz
 ```
 This will lead to XX_MMJJ_c.dir XX_MMJJ_c.hdr (XX depending on the file you are working on)
-   ### 1.2 Copy run make_uncompress.sh and uncompress_file_300m0.F90 in the folder containing XX_MMJJ_c.dir XX_MMJJ_c.hdr couples
-   
+   ### 1.2 Edit the first line of make_uncompress_files.sh according to your file names
+example for LAI files
+```
+$ vi make_uncompress.sh
+$i 
+$for file in LAI*
+:q
+
+```
+example for vissible albedo files
+```
+$ vi make_uncompress.sh
+$i 
+$for file in AL-BH-VI*
+:q
+
+```
+
    ### 1.3 run make_uncompress.sh
 this will create XX_MMJJ_c.dir_2 file 
 ```
