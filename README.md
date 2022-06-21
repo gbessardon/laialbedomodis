@@ -83,14 +83,25 @@ $ nohup python3 Download_nasa_script.py
 
 ```
 ## 3. Create 10 days median for each tiles
-go in the tiles_median directory and run the python script or the notebook there
+Go in the tiles_median directory and run the script or notebook "MODIS_albedo_QC_snow_10_daymedian"
+Edit the DATADIR which is the directory where your MCD43A3 data have been downloaded (for future collection or different product it needs to be replaced
 ```
 $ cd tiles_median
+
+$ nohup python3 MODIS_albedo_QC_snow_10_daymedian.py
 ```
+MODIS_albedo_QC_snow_10_daymedian lists all the MCD43A3 and MCD43A2 pairs presents in datadir
+Proceed the MCD43A3 QC on the NIR and VIS band, identifies the snow data using MCD43A2 and produce 10days median following the ECOCLIMAP-SG dates
+saves the 10days median in the OUTPUTDIR
 ## 4 Merge and reproject MODIS tiles
-
-
+```
+$ cd merge_tiles_reproject/
+```
 ## 5 Merge MODIS to the rest of ECOSG data
+
+```
+$ cd merge_modis_ecosg 
+```
 
 ## 6 Recompress the resulting files
 
